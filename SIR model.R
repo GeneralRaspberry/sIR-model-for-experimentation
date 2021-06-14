@@ -9,13 +9,13 @@ t<-0
 I<-infected/hosts
 S<-1-I
 R<-1-I-S
-beta<-.5
+beta<-1
 gammy<-.5
 
 
 simodeldf<-data.frame(Susceptible=S,Infected=I,Removed=R, Time=t)
 
-while(R<.9999){
+while(t<1000){
   
   ds<- -beta*I*S
   di<- beta*I*S - I*gammy
